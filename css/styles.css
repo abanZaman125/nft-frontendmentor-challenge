@@ -1,0 +1,134 @@
+/*Class used for centering items. I think in SCSS this is called a Mixin*/
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+
+  min-height: 100vh;
+}
+
+.card-container {
+  padding: 1em;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 14px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 311px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.cube-image {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.icon-container {
+  position: absolute;
+  z-index: 5; /*Infront of image.*/
+
+  width: 311px;
+  height: 311px;
+
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 14px;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+}
+.eye-icon {
+  transition: filter 0.5s ease-in-out;
+  filter: opacity(0);
+}
+
+.card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+
+  transition: color 0.5s ease-in-out;
+  color: white;
+}
+.card-text {
+  margin: 0;
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: hsl(215, 13%, 51%);
+}
+
+.info-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+.card-price {
+  margin: 0 0 0 0.5em;
+  display: inline-block;
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: hsl(178, 100%, 50%);
+}
+.time-remaining-text {
+  margin: 0 0 0 0.5em;
+  display: inline-block;
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: hsl(215, 13%, 51%);
+}
+
+.hr-line {
+  background-color: hsl(215, 32%, 27%);
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+.creator-image {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 50px;
+}
+.creator-text {
+  margin: 1em 0 1em 1em;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: hsl(215, 13%, 51%);
+}
+.creator-name {
+  transition: color 0.5s ease-in-out;
+  color: white;
+}
+
+/*-------------- H O V E R - S T A T E S -------------------------------------*/
+
+.card-title:hover, .creator-name:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.icon-container.center:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.icon-container.center:hover .eye-icon{
+  /*Inherits 0.6 opacity from .icon-container.center:hover!!!!! >:( )*/
+  filter: opacity(1);
+}
