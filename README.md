@@ -13,11 +13,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](frontend-screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/nft-preview-card-solution-xyS6wid-ge)
 - [Live Site URL](https://abanzaman125.github.io/nft-frontendmentor-challenge/)
 
 ## My process
